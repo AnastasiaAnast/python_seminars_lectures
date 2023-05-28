@@ -6,6 +6,16 @@
 # Output: 120
 
 # n = int(input("Введите целое неотрицательное число: "))
+# if n < 0 :
+#     n = -1 * n
+# pow = 1
+# for i in range(1, n+1):
+#     pow *= i
+#     print(pow)
+
+# ИЛИ
+
+# n = int(input("Введите целое неотрицательное число: "))
 # count = 1 #счетчик
 # pow = 1 #произведение
 # while n >= 0:
@@ -15,6 +25,8 @@
 # else:
 #     print("Введенное число не подходит по условию задачи.")
 
+# ИЛИ
+
 # n = int(input("Введите число: "))
 # r = range(1,n + 1) #range берет значения начиная с 0
 # nFakt = 1
@@ -22,6 +34,8 @@
 # for i in r:
 #     nFakt *= i
 #     print(nFakt)
+
+# ИЛИ
 
 # n  = int(input('Введите N: '))
 # i = 1
@@ -110,18 +124,20 @@
 # Input: 5 -> 5 1 6 5 9
 # Output: 1 9
 
-n = int(input())
-r = range(n)
-min = max = 0
-for i in r :
-    weight = int((input))
-    if max == 0 :
-        max = min = weight
-    elif weight > max :
-        max = weight
-    elif weight < min :
-        min = weight
-print(min, max)
+# n = int(input())
+# r = range(n)
+# min = max = 0
+# for i in r :
+#     weight = int((input))
+#     if max == 0 :
+#         max = min = weight
+#     elif weight > max :
+#         max = weight
+#     elif weight < min :
+#         min = weight
+# print(min, max)
+
+# ИЛИ
 
 # n = int(input())
 # r = range(n)
