@@ -12,10 +12,17 @@
 # 3 
 # вывод: -> 1
 
-# num = int(input("Введите кол-во элементов в массиве: "))
-# for i in set(range(1, num+1)):
-#     print(i)
-
+# list_ = []
+# n = int(input("Введите количетсво элементов в массиве: "))
+# for i in range(1, n+1) :
+#     list_.append(i)
+# print(*list_)
+# x = int(input("Введите число x: "))
+# count = 0
+# for i in range(len(list_)) :
+#     if list_[i] == x :
+#         count += 1
+# print(f'число x встречается {count} раз(а)')
 
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по
 # величине элемент к заданному числу X. Пользователь в первой строке
@@ -28,8 +35,25 @@
 # 6 
 # вывод: -> 5
 
+# arr_ = []
+# n = int(input("Введите количетсво элементов в массиве: "))
+# for i in range(1, n+1) :
+#     arr_.append(i)
+# print(*arr_)
+# x = int(input("Введите число x: "))
+# dif_min = x
+# for i in range(len(arr_)) :
+#     if arr_[i] == x :
+#         break
+#     if abs(x - arr_[i]) < dif_min :
+#         dif_min = arr_[i]
+# print(f'Самый близкий по величине элемент {arr_[i]}')
+
 # Задача 20: В настольной игре Скрабл (Scrabble) каждая буква имеет определенную
 # ценность. В случае с английским алфавитом очки распределяются так:
+
+# в строках сравниваются символы кодировки, поэтому заглавные буквы будут МЕНЬШЕ прописных    print("i" > "I") #true
+
 # ● A, E, I, O, U, L, N, S, T, R – 1 очко;
 # ● D, G – 2 очка;
 # ● B, C, M, P – 3 очка;
@@ -56,3 +80,26 @@
 # #       01234
 # for i in range(len(data)):
 #     print(data[i])
+
+# word = input("Введите текст: ")
+# print(word.upper())
+# # .lower() <-> .upper()
+
+# word = input("Введите текст: ").upper()
+# dict_ = { 
+#         'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т': 1, 
+#         'D, G, Д, К, Л, М, П, У': 2,
+#         'B, C, M, P, Б, Г, Ё, Ь, Я': 3,
+#         'F, H, V, W, Y, Й, Ы': 4,
+#         'K, Ж, З, Х, Ц, Ч': 5,
+#         'J, X, Ш, Э, Ю': 8,
+#         'Q, Z, Ф, Щ, Ъ': 10
+#         }
+# "Hello"
+# 01234
+# summa = 0
+# for char in word:
+#     for key in dict_:
+#         if char in key:
+#             summa += dict_[key]
+#     print(char)

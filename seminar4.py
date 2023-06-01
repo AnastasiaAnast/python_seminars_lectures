@@ -7,14 +7,30 @@
 # Output: a a_1 a_2 b c a_3 a_4 d c_1 d_1 d_2
 # Для решения данной задачи используйте функцию .split()
 # Функция split сканирует всю строку и разделяет ее в случае нахождения разделителя.
+# n - номер повтора, те ключ - номер повтора
+# в .split разделение идет по пробелам - ВВОД ЧЕРЕЗ ПРОБЕЛ
 
-# Задача №25. Общее обсуждение
-# Напишите программу, которая принимает на вход
-# строку, и отслеживает, сколько раз каждый символ уже встречался. 
-# Количество повторов добавляется к символам с помощью постфикса формата _n.
-# Input: a a a b c a a d c d d
-# Output: a a_1 a_2 b c a_3 a_4 d c_1 d_1 d_2
-# Для решения данной задачи используйте функцию.split()
+# word = input("Введите текст: ").split()
+# result = {}
+# for i in word:
+#     if i in result:
+#         print(f'{i}_{result[i]}', end=' ') # end=' ' позволяет выводить в строку через указанный символ - здесь - пробел
+#         result[i] += 1
+#     else: # ключа i нет внутри словаря result
+#         print(i, end=' ') # end=' ' позволяет выводить в строку через указанный символ - здесь - пробел
+#         result[i] = 1   
+
+# #  ИЛИ
+
+# word = input("Введите текст: ").split()
+# result = {}
+# for i in word:
+#     if i in result:
+#         print(f'{i}_{result[i]}', end=' ')
+#     else: # ключа i нет внутри словаря result
+#         print(i, end=' ')
+#     result[i] = result.get(i, 0) + 1 # .get возвращает значение по указанному ключу, если значение не найдено - 0
+
 
 # Задача №27. Решение в группах
 # Пользователь вводит текст(строка). Словом считается последовательность непробельных символов
@@ -25,17 +41,17 @@
 # shells on the sea shore I'm sure that the shells are sea
 # shore shells
 # Output: 13
+# через МН-ВА решение
 
 # Задача №27. Общее обсуждение
 # Пользователь вводит текст(строка). Словом считается
-# последовательность непробельных символов идущих
-# подряд, слова разделены одним или большим числом
-# пробелов или символами конца строки.Определите,
-# сколько различных слов содержится в этом тексте.
-# Input: She sells sea shells on the sea shore;The shells
-# that she sells are sea shells I'm sure.So if she sells sea
-# shells on the sea shore,I'm sure that the shells are sea shore shells.
+# последовательность непробельных символов идущих подряд, 
+# слова разделены одним или большим числом пробелов или символами конца строки.
+# Определите, сколько различных слов содержится в этом тексте.
+# Input: She sells sea shells on the sea shore; The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore,I'm sure that the shells are sea shore shells.
 # Output: 19
+
+# print(len(set(input("Введите текст: ").lower().split())))
 
 # Задача №29. Решение в группах Ваня и Петя поспорили, кто быстрее решит задачу: 
 # “Задана последовательность неотрицательных целых чисел. Требуется 
@@ -47,19 +63,28 @@
 # Примечание: Программные коды на следующих слайдах
 
 # Ваня:
-# n = int(input())
-# max_number = 1000
-# while n != 0:
-#  n = int(input())
-#  if max_number > n:
-#     max_number = n
-# print(max_number)
+n = int(input())
+max_number = 1000
+while n != 0:
+ n = int(input())
+ if max_number > n:
+    max_number = n
+print(max_number)
 
 # Петя:
-# n = int(input())
-# max_number = -1
-# while n < 0:
-#  n = int(input())
-#  if max_number < n:
-#     n = max_number
-# print(n) 
+n = int(input())
+max_number = -1
+while n < 0:
+ n = int(input())
+ if max_number < n:
+    n = max_number
+print(n) 
+
+# верное решение
+n = int(input())
+max_number = n
+while n != 0 or n > 0:
+    n = int(input())
+    if max_number < n:
+        max_number = n
+print(max_number)
