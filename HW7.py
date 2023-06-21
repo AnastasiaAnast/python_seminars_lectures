@@ -9,6 +9,16 @@
 # Ввод: Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам Парам пам-пам
 
+text = input("Введите строчку стихотворения Винни-Пуха: ").lower().split()
+
+f = lambda x: sum(1 for i in x if i in 'а')
+
+t = f(text[0])
+
+if all([f(i) == t for i in text]):
+    print("Парам пам-пам")
+else:
+    print("Пам парам")
 
 # Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
 # которая принимает в качестве аргумента функцию, вычисляющую элемент по номеру строки и
@@ -23,3 +33,13 @@
 #  4 8 12 16 20 24
 #  5 10 15 20 25 30
 #  6 12 18 24 30 36
+
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows + 1):
+        table=[]
+        for j in range(1, num_columns +1):
+            table.append(str(operation(i,j)))
+        print('\t'.join(table))
+
+        
+print_operation_table(lambda x, y: x * y)  
